@@ -6,9 +6,8 @@ class Solution {
             if (freq==0) {
                 element = nums[i];
                 freq++;
-                continue;
             }
-            if (nums[i] == element) {
+            else if (nums[i] == element) {
                 freq++;
             }
             else {
