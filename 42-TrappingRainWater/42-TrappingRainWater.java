@@ -17,4 +17,16 @@ class Solution {
                 left++;
             }
             else {
+                if (height[right]>=rightmax) {
+                    rightmax = height[right];
+                }
+                else {
+                    ans = ans + (rightmax-height[right]);
+                }
+                right--;
+            }
+        }
+        return ans;
+    }
+}
 [
