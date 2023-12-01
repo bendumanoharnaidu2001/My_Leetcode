@@ -1,3 +1,4 @@
+class Solution {
     public String longestCommonPrefix(String[] strs) {
         String temp = strs[0];
         int ans = Integer.MAX_VALUE;
@@ -15,4 +16,7 @@
             ans = Math.min(ans,count);
             temp = temp.substring(0,ans);
         }
+        return temp;
+    }
+}
 [
