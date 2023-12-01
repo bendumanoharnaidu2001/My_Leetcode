@@ -1,40 +1,20 @@
-class Solution {
-    public int myAtoi(String s) {
-        int n = s.length();
-        int i = 0;
-        int sign = 1;
-        while(i<n && s.charAt(i)==' ') {
-            i++;
         }
-        if (i>=n) {
-            return 0;
-        }
-        if (s.charAt(i)=='-') {
-            sign = -1;
-        }
-        if (s.charAt(i)=='+' || s.charAt(i)=='-') {
-            i++;
-        }
-
-        if (i>=n) {
-            return 0;
-        }
-        int num = 0;
-        while (i<n && s.charAt(i)>='0' && s.charAt(i)<='9') {
-            int x = s.charAt(i)-'0';
-            //System.out.println(x);
-            if (num>Integer.MAX_VALUE/10 || (num==Integer.MAX_VALUE/10 && x>Integer.MAX_VALUE%10)) {
-                if (sign==1) {
-                    return Integer.MAX_VALUE;
-                }
-                else {
-                    return Integer.MIN_VALUE;
-                }
+        return s.substring(start,end+1);
             }
-            num = num*10 + x;
-            i++;
-        }
-        return num*sign;
+            if (len > end - start + 1) {
+                start = i- (len - 1) / 2;
+                end = i + len / 2;
     }
-}
-"42"
+    public int expand(char[] s, int i, int j) {
+            int len = Math.max(expand(charArray,i,i) , expand(charArray,i,i+1));
+        for (int i=0; i<charArray.length; i++) {
+        int start = 0;
+        int end = 0;
+        }
+        char charArray[] = s.toCharArray();
+
+        if (s.length()==0) {
+            return "";
+class Solution {
+    public String longestPalindrome(String s) {
+"
