@@ -8,12 +8,12 @@ class Solution {
     public void getsubsets(List<List<Integer>> ans, List<Integer> arr, int[] nums, int idx) {
         if (idx==nums.length) {
             ans.add(new ArrayList<>(arr));
-        }
-    }
             return;
+        }
         arr.add(nums[idx]);
         getsubsets(ans,arr,nums,idx+1);
         arr.remove(arr.size()-1);
         getsubsets(ans,arr,nums,idx+1);
+    }
 }
 [
