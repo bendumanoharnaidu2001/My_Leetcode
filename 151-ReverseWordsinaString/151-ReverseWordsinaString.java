@@ -22,8 +22,4 @@ class Solution {
                 ans = sub + " " + ans;
             }
             i = j;
-        }
-        return ans;
-    }
-}
-"
+"the sky is blue"
