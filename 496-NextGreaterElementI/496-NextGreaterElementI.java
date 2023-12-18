@@ -36,4 +36,4 @@ class Solution {
         return nums1;
     }
 }
-[
+[4,1,2]
