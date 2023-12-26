@@ -1,14 +1,28 @@
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
 class Solution {
-    public int[][] transpose(int[][] matrix) {
-        int n = matrix.length;
-        int m = matrix[0].length;
-        int newmatrix[][] = new int[m][n];
-        for (int i=0; i<n; i++) {
-            for (int j=0; j<m; j++) {
-                newmatrix[j][i] = matrix[i][j];
-            }
+    public ListNode deleteMiddle(ListNode head) {
+        if·(head.next==null·||·head==null)·{
+············return·null;
+········}
+        ListNode dummy = new ListNode();
+        dummy.next = head;
+        ListNode slow = dummy;
+        ListNode fast = dummy;
+        while (fast.next!=null && fast.next.next!=null) {
+            fast = fast.next.next;
+            slow = slow.next;
         }
-        return newmatrix;
+        slow.next = slow.next.next;
+        return head;
     }
 }
-[[1,2,3],[4,5,6],[7,8,9]]
+[
