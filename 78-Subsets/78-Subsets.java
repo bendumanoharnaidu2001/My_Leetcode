@@ -16,4 +16,4 @@ class Solution {
         getsubsets(ans,arr,nums,idx+1);
     }
 }
-[
+[1,2,3]
